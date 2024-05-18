@@ -186,4 +186,4 @@ Pour en tester le bon fonctionnement :
 
 Si toutes les étapes ont été réalisé et que les clés générées ont bien été copié, cette commande n'est pas censée vous demander votre mot de passe. Si c'est le cas, c'est que la clé situé localement est différente que la clé située dans le serveur; donc le serveur ne reconnaît pas votre clé et demande un mot de passe.
 
-![test ssh](testssh.png) 
+![test ssh](testssh.gif) 
