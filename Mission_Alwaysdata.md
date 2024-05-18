@@ -170,7 +170,7 @@ Se connecter avec une paire de clés privée et publique renforce la sécurité 
 
     >`ssh-copy-id -i ~/.ssh/id_rsa.pub dylan@ssh-dylan.alwaysdata.net`
 
-Arrivé à ce stade, vous devez être capable de vous connecter à votre serveur distant à l'aide de votre ordinateur local.
+Arrivé à ce stade, vous devez être capable de vous connecter à votre serveur distant à l'aide de votre ordinateur local sans que ça ne vous demande un mot de passe et en utilisant la commande ci-dessous.
 
 ### 📜 **Notez les étapes pour en tester le bon fonctionnement** 
 
@@ -185,3 +185,5 @@ Pour en tester le bon fonctionnement :
     Assure-toi de remplacer les "dylan" par premièrement ton nom d'utilisateur AlwaysData et deuxièmement par ton nom d'utilisateur SSH.
 
 Si toutes les étapes ont été réalisé et que les clés générées ont bien été copié, cette commande n'est pas censée vous demander votre mot de passe. Si c'est le cas, c'est que la clé situé localement est différente que la clé située dans le serveur; donc le serveur ne reconnaît pas votre clé et demande un mot de passe.
+
+![test ssh](testssh.png) 
