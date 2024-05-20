@@ -48,9 +48,16 @@ Le protocole FTP transfère des fichiers, mais il manque de sécurité. Contrair
 
 1. Se connecter à son compte sur le site d'AlwaysData.
 
-2. Accéder à la section "Accès Distant".
+    ![screen etape 1](screenconnexion.png) 
 
-3. Créer un nouvel utilisateur SSH en spécifiant un nom d'utilisateur et un mot de passe.
+2. Dans la section "Accès Distant", accéder à SSH.
+
+    ![screen etape 2](screenaccesdistant.png) 
+
+3. Créer un nouvel utilisateur SSH en spécifiant un nom d'utilisateur et un <span style="color: red">**mot de passe**</span>.
+
+    ![screen etape 3](screencreerutilisateurssh.png) 
+
 Après avoir effectué ces étapes, l'accès au serveur sera activé et vous pourrez y accéder grâce à votre nouvel utilisateur SSH.
 
 ### 📜 **Se connecter à votre espace dédié sur le serveur via ce protocole. Quelle est la ligne de commande nécessaire pour y arriver ?**
@@ -70,13 +77,13 @@ Si les informations sont correctes, vous devriez être connecté au serveur via 
 
 Pour voir vos fichiers déposés sur le site en ligne, vous devez les placer dans le répertoire "www" situé dans le répertoire principal de votre compte Alwaysdata. Le chemin complet est généralement :
 
->`/home/"nom_du_compte_alwaysdata/www/`
+>`/home/"nom_du_compte_alwaysdata"/www/`
 
 Voici l'exemple du chemin complet pour mon site :
 
 >`/home/dylan/www/`
 
-![image du chemin](cheminsite.png) 
+![image du chemin serveur](cheminsite.png) 
 
 ---
 
@@ -87,6 +94,8 @@ Voici l'exemple du chemin complet pour mon site :
 Le chemin pour accéder à mon site localement est le suivant : 
 
 >`C:/Users/MoPiM/Desktop/portfolio_/og_dylan_portfolio/index.html`
+
+![image du chemin local site](cheminlocalsite.png) 
 
 ### 📜 **Quel est le chemin absolu du repertoire dédié sur le serveur Alwaysdata ?**
 
@@ -108,7 +117,7 @@ la commande complète pour ajouter les fichiers sauvegardés en local sur le ser
 
 >`scp -r chemin/du/fichier/fichier.xxx <nom_du_compte_alwaysdata>@ssh-<nom_d'utilisateur_SSH>.alwaysdata.net:/home/<nom_du_compte_alwaysdata>/www/`
 
-Le `-r` est utilisé pour copier récursivement tout le contenu du répertoire local, y compris les sous-répertoires.
+<span style="color:yellow">Le `-r` est utilisé pour copier récursivement tout le contenu du répertoire local, y compris les sous-répertoires.</span>
 
 Dans mon cas, j'ai exécuté cette commande : 
 
@@ -126,7 +135,7 @@ Pour vérifier que l'ajout des fichiers sur ton serveur SSH a bien été effectu
 
     >`ssh dylan@ssh-dylan.alwaysdata.net`
 
-    Assure-toi de remplacer les "dylan" par premièrement ton nom d'utilisateur AlwaysData et deuxièmement par ton nom d'utilisateur SSH.
+    <span style="color:yellow">Assure-toi de remplacer les "dylan" par premièrement ton nom d'utilisateur AlwaysData et deuxièmement par ton nom d'utilisateur SSH.</span>
 
 2. Naviguer vers le répertoire de destination. 
     
@@ -134,7 +143,7 @@ Pour vérifier que l'ajout des fichiers sur ton serveur SSH a bien été effectu
 
     >`cd /home/dylan/www/`
 
-3. Vérification des fichiers : Une fois dans le répertoire de destination, on peut utiliser la commande ls pour lister tous les fichiers et répertoires présents. On s'assure que les fichiers que ajoutés sont bien répertoriés.
+3. Vérification des fichiers : Une fois dans le répertoire de destination, on peut utiliser la commande `ls` pour lister tous les fichiers et répertoires présents. On s'assure que les fichiers que ajoutés sont bien répertoriés.
 
 ### 📜 **Quelle URL permet de voir votre site en ligne ?**
 
@@ -170,7 +179,11 @@ Se connecter avec une paire de clés privée et publique renforce la sécurité 
 
     >`ssh-copy-id -i ~/.ssh/id_rsa.pub dylan@ssh-dylan.alwaysdata.net`
 
+    <span style="color:yellow">L'option `-t` spécifie le type de clé, `-b` définit sa longueur en bits, `-C` ajoute un commentaire pour l'identifier, et `-i` convertit les clés entre différents formats.</span>
+
 Arrivé à ce stade, vous devez être capable de vous connecter à votre serveur distant à l'aide de votre ordinateur local sans que ça ne vous demande un mot de passe et en utilisant la commande ci-dessous.
+
+![test ssh](création_copiecléssh.gif) 
 
 ### 📜 **Notez les étapes pour en tester le bon fonctionnement** 
 
@@ -182,8 +195,8 @@ Pour en tester le bon fonctionnement :
 
     >`ssh dylan@ssh-dylan.alwaysdata.net`
 
-    Assure-toi de remplacer les "dylan" par premièrement ton nom d'utilisateur AlwaysData et deuxièmement par ton nom d'utilisateur SSH.
+    <span style="color:yellow">Assure-toi de remplacer les "dylan" par premièrement ton nom d'utilisateur AlwaysData et deuxièmement par ton nom d'utilisateur SSH.</span>
 
-Si toutes les étapes ont été réalisé et que les clés générées ont bien été copié, cette commande n'est pas censée vous demander votre mot de passe. Si c'est le cas, c'est que la clé situé localement est différente que la clé située dans le serveur; donc le serveur ne reconnaît pas votre clé et demande un mot de passe.
+Si toutes les étapes ont été réalisé et que les clés générées ont bien été copié, cette commande n'est pas censée vous demander votre mot de passe. Si c'est le cas, c'est que la clé située localement est différente que la clé située dans le serveur; donc le serveur ne reconnaît pas votre clé et demande un mot de passe.
 
-![test ssh](testssh.png) 
+![test ssh](testssh.gif) 
