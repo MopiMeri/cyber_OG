@@ -1,9 +1,9 @@
-![bannière TP](tpa.png)
+![bannière TP](imagesAD/tpa.png)
 ESIEE-IT - (BTS SIO SLAM) - 18/04/2024
 
 ---
 
-![bannière etape 0](etape0.png)
+![bannière etape 0](imagesAD/etape0.png)
 
 ### 📜 **Quels services sont offerts par Alwaysdata ?**
 
@@ -34,7 +34,7 @@ Le nom de domaine choisi est le suivant : `dylan.alwaysdata.net`
 
 ---
 
-![bannière étape 1](etape1.png)
+![bannière étape 1](imagesAD/etape1.png)
 
 ### 📜 **Expliquer l'intérêt du protocole SSH. Sur quel port est-il actif par défaut ?**
 
@@ -48,15 +48,15 @@ Le protocole FTP transfère des fichiers, mais il manque de sécurité. Contrair
 
 1. Se connecter à son compte sur le site d'AlwaysData.
 
-    ![screen etape 1](screenconnexion.png) 
+    ![screen etape 1](imagesAD/screenconnexion.png) 
 
 2. Dans la section "Accès Distant", accéder à SSH.
 
-    ![screen etape 2](screenaccesdistant.png) 
+    ![screen etape 2](imagesAD/screenaccesdistant.png) 
 
 3. Créer un nouvel utilisateur SSH en spécifiant un nom d'utilisateur et un <span style="color: red">**mot de passe**</span>.
 
-    ![screen etape 3](screencreerutilisateurssh.png) 
+    ![screen etape 3](imagesAD/screencreerutilisateurssh.png) 
 
 Après avoir effectué ces étapes, l'accès au serveur sera activé et vous pourrez y accéder grâce à votre nouvel utilisateur SSH.
 
@@ -83,11 +83,11 @@ Voici l'exemple du chemin complet pour mon site :
 
 >`/home/dylan/www/`
 
-![image du chemin serveur](cheminsite.png) 
+![image du chemin serveur](imagesAD/cheminsite.png) 
 
 ---
 
-![bannière étape 2](etape2.png) 
+![bannière étape 2](imagesAD/etape2.png) 
 
 ### 📜 **Quel est le chemin local absolu pour accéder à votre site ?**
 
@@ -95,7 +95,7 @@ Le chemin pour accéder à mon site localement est le suivant :
 
 >`C:/Users/MoPiM/Desktop/portfolio_/og_dylan_portfolio/index.html`
 
-![image du chemin local site](cheminlocalsite.png) 
+![image du chemin local site](imagesAD/cheminlocalsite.png) 
 
 ### 📜 **Quel est le chemin absolu du repertoire dédié sur le serveur Alwaysdata ?**
 
@@ -125,7 +125,7 @@ Dans mon cas, j'ai exécuté cette commande :
 
 Voici ce que c'est censé faire :
 
-![scp-copy](scp-copy.gif)
+![scp-copy](imagesAD/scp-copy.gif)
 
 ### 📜 **Comment vérifier que l'ajout a bien été effectué ? Détailler la procédure et les résultats attendus.**
 
@@ -151,7 +151,7 @@ Pour vérifier que l'ajout des fichiers sur ton serveur SSH a bien été effectu
 
 ---
 
-![bannière étape 3](etape3.png) 
+![bannière étape 3](imagesAD/etape3.png) 
 
 ### 📜 **Expliciter dans vos mots ce principe d'authentification**
 
@@ -183,7 +183,7 @@ Se connecter avec une paire de clés privée et publique renforce la sécurité 
 
 Arrivé à ce stade, vous devez être capable de vous connecter à votre serveur distant à l'aide de votre ordinateur local sans que ça ne vous demande un mot de passe et en utilisant la commande ci-dessous.
 
-![test ssh](création_copiecléssh.gif) 
+![test ssh](imagesAD/création_copiecléssh.gif) 
 
 ### 📜 **Notez les étapes pour en tester le bon fonctionnement** 
 
@@ -199,4 +199,4 @@ Pour en tester le bon fonctionnement :
 
 Si toutes les étapes ont été réalisé et que les clés générées ont bien été copié, cette commande n'est pas censée vous demander votre mot de passe. Si c'est le cas, c'est que la clé située localement est différente que la clé située dans le serveur; donc le serveur ne reconnaît pas votre clé et demande un mot de passe.
 
-![test ssh](testssh.gif) 
+![test ssh](imagesAD/testssh.gif) 
